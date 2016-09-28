@@ -7,7 +7,7 @@ class Cats(Controller):
     self.db = self._app.db
 
   def index(self):
-    pass
+    return self.load_view('/main.html')
 
   def getAllCats(self):
     cats = self.models['Cat'].getAllCats()

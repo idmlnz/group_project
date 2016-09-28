@@ -10,7 +10,7 @@ from system.core.router import routes
     routes['DELETE']['/users/<int:id>'] = 'users#destroy'
 """
 
-routes['default_controller'] = 'Welcome'
+routes['default_controller'] = 'Cats'
 
 
 #--- cats
