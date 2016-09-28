@@ -18,6 +18,7 @@ routes['GET']['/cats/getAllCats'] = 'Cats#getAllCats'
 
 #--- users
 routes['GET']['/users/getUserByEmail/<email>'] = 'Users#getUserByEmail'
+routes['GET']['/users/getUserAddressByEmail/<email>'] = 'Users#getUserAddressByEmail'
 
 #--- pricing
 routes['GET']['/pricings/getPricing'] = 'Pricings#getPricing'

@@ -13,6 +13,9 @@ class Users(Controller):
     user = self.models['User'].getUserByEmail(email)
     return self.load_view('/index.html', data=user)
 
+  def getUserAddressByEmail(self, email):
+    user = self.models['User'].getUserAddressByEmail(email)
+    return self.load_view('/index.html', data=user)
 
   def doAction(self, email):
     action = request.form['action']
