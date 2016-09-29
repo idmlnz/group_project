@@ -45,7 +45,7 @@ class Users(Controller):
     userInfo['password'] = request.form['password']
     userInfo['confirm_password'] = request.form['confirm_password']
 
-    createStatus = self.models['Register'].createUser(userInfo)
+    createStatus = self.models['User'].createUser(userInfo)
     print "createstatus: {}".format(createStatus)
     if createStatus['status'] == True:
       session['user'] = createStatus['user']
@@ -61,7 +61,7 @@ class Users(Controller):
     userInfo['email'] = request.form['login-email']
 
     userInfo['password'] = request.form['login-password']
-    loginStatus = self.models['Register'].checkUser(userInfo)
+    loginStatus = self.models['User'].checkUser(userInfo)
 
     if loginStatus['status'] == True:
       session['user'] = loginStatus['user']
@@ -70,7 +70,9 @@ class Users(Controller):
 
       for message in loginStatus['errors']:
         flash(message, 'regis_errors')
-      return self.load_view('registration/register.html', error=loginStatus['errors'])
+      return self.load_view('users/users.html', error=loginStatus['errors'])
 
+    print "LOGIN successful for: {}".format(userInfo['email'])
+    session['userid'] = userInfo['email']
     return redirect('/')
 
