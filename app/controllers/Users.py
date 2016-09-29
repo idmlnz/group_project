@@ -21,14 +21,56 @@ class Users(Controller):
     user = self.models['User'].getUserAddressByEmail(email)
     return self.load_view('/index.html', data=user)
 
-  def doAction(self, email):
-    action = request.form['action']
-    if (action == 'View Profile'):
-      return self.displayUserView(email)
+  def isLogged(self):
+    # - check if user is login
+    try:
+      session['userid']
+      print '\nuserid is SET'
+      # -- display rent/adopt modal
+      isLogged = {'value':1}
+      return jsonify(isLogged=isLogged)
 
-    if (action == 'Add as  Friend'):
-      pass
+    except KeyError:
+      print '\nuserid is NOT set'
+      # -- display login modal
+      isLogged = {'value':0}
+      return jsonify(isLogged=isLogged)
 
-    if (action == 'Remove as Friend'):
-      pass
+
+  def add(self):
+    userInfo = {}
+    userInfo['firstname'] = request.form['firstname']
+    userInfo['lastname'] = request.form['lastname']
+    userInfo['email'] = request.form['email']
+    userInfo['password'] = request.form['password']
+    userInfo['confirm_password'] = request.form['confirm_password']
+
+    createStatus = self.models['Register'].createUser(userInfo)
+    print "createstatus: {}".format(createStatus)
+    if createStatus['status'] == True:
+      session['user'] = createStatus['user']
+    else:
+      for message in createStatus['errors']:
+        flash(message, 'regis_errors')
+      return self.load_view('registration/register.html', error=createStatus['errors'])
+
+    return redirect('/')
+
+  def login(self):
+    userInfo = {}
+    userInfo['email'] = request.form['login-email']
+
+    userInfo['password'] = request.form['login-password']
+    loginStatus = self.models['Register'].checkUser(userInfo)
+
+    if loginStatus['status'] == True:
+      session['user'] = loginStatus['user']
+
+    else:
+
+      for message in loginStatus['errors']:
+        flash(message, 'regis_errors')
+      return self.load_view('registration/register.html', error=loginStatus['errors'])
+
+    return redirect('/')
 

@@ -15,9 +15,13 @@ routes['default_controller'] = 'Cats'
 
 #--- cats
 routes['GET']['/cats/getAllCats'] = 'Cats#getAllCats'
+routes['GET']['/cats/selection/<id>'] = 'Cats#selection'
 
 #--- users
 routes['GET']['/users/register'] = 'Users#register'
+routes['GET']['/users/isLogged'] = 'Users#isLogged'
+routes['POST']['/users/add'] = 'Users#add'
+routes['POST']['/users/login'] = 'Users#login'
 
 routes['GET']['/users/getUserByEmail/<email>'] = 'Users#getUserByEmail'
 routes['GET']['/users/getUserAddressByEmail/<email>'] = 'Users#getUserAddressByEmail'
