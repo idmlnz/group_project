@@ -1,0 +1,33 @@
+@import url('http://getbootstrap.com/dist/css/bootstrap.css');
+ html, body, .container-table {
+    height: 100%;
+}
+.container-table {
+    display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+form {
+	margin-bottom: 50px;
+}
+p {
+	font-size: 1.5em;
+	font-family: sans-serif;
+	color: #2E2E2E;
+}
+body {
+    background-image: url("../bgs/intro_bg.jpg");
+    background-color: #cccccc;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+span {
+	font-weight: bold;
+}
+button {
+	background-color: #cccccc;
+}
