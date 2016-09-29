@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+        .thumbnail img { 
+          transition: all .2s ease-in-out;
+          }
+
+        .thumbnail img:hover { 
+          transform: scale(1.1); 
+        }
+    
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default" >
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/history"><span class="glyphicon glyphicon glyphicon-shopping-cart"></span> History</a></li>
+            <li><a href="/register_signin"><span class="glyphicon glyphicon-user"></span> Sign Up/Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+
+    <div class="container">
+      <br>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active text-center" style="width: 100%; margin: auto; padding: 10px;">
+
+            <div class="row">
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat1.jpeg') }}" alt="cat1" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat2.jpeg') }}" alt="cat2" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat3.jpeg') }}" alt="cat3" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat4.jpeg') }}" alt="cat4" >
+                </a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat5.jpeg') }}" alt="cat5" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat6.jpeg') }}" alt="cat6" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat7.jpeg') }}" alt="cat7" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat8.jpeg') }}" alt="cat8" >
+                </a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat9.jpeg') }}" alt="cat9" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat10.jpeg') }}" alt="cat10" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat11.jpeg') }}" alt="cat11" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat12.jpeg') }}" alt="cat12" >
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="item text-center" style="width: 100%; margin: auto; padding: 10px;">
+
+            <div class="row">
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat13.jpeg') }}" alt="cat13" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat14.jpeg') }}" alt="cat14" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat15.jpeg') }}" alt="cat15" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat16.jpeg') }}" alt="cat16" >
+                </a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat17.jpeg') }}" alt="cat17" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat18.jpeg') }}" alt="cat18" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat19.jpeg') }}" alt="cat19" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat20.jpeg') }}" alt="cat20" >
+                </a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat21.jpeg') }}" alt="cat21" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat22.jpeg') }}" alt="cat22" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat23.jpeg') }}" alt="cat23" >
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <a href="/" class="thumbnail">
+                  <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat24.jpeg') }}" alt="cat24" >
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
