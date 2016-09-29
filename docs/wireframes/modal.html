@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login registration</title>
+  <meta name="description" content="Login App">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Sign Up</h4>
+          </div>
+
+          <div class="row"> <!-- facebook -->
+            <div class="col-md-6 col-md-offset-3">
+                <br>
+                <button type="submit" class="btn btn-info center-block">Login with Facebook</button>
+            </div>
+          </div> <!-- End facebook -->
+
+          <div class="modal-body">
+
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                          <!--
+                            {% with messages = get_flashed_messages(with_categories=true) %}
+                                 {% if messages %}
+                                   <ul class=flashes>
+                                       {% for category, message in messages: %}
+                                           {% if category == 'register_errors' %}
+                                                 <li>{{ message }}</li>
+                                             {% endif %}
+                                       {% endfor %}
+                                      </ul>
+                                 {% endif %}
+                            {% endwith %}
+                            -->
+                            <h3 class="col-md-offset-0">Registration</h3>
+                            <form action="/register" method="post" class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-md-offset-1">First name:</label>
+                                    <div class="col-md-5">
+                                        <input type="text" class="form-control" name="firstname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-md-offset-1">Last name:</label>
+                                    <div class="col-md-5">
+                                        <input type="text" class="form-control" name="lastname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-md-offset-2">Email:</label>
+                                    <div class="col-md-5">
+                                        <input type="email" class="form-control" name="email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-md-offset-1">Password:</label>
+                                    <div class="col-md-5">
+                                        <input type="password" class="form-control" name="pwd">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-md-offset-0">Confirm password:</label>
+                                    <div class="col-md-5">
+                                        <input type="password" class="form-control" name="confirm_pwd">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-2 col-md-offset-4">
+                                        <button type="submit" class="btn btn-info">Register</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                             {% if messages %}
+                               <ul class=flashes>
+                                   {% for category, message in messages: %}
+                                       {% if category == 'login_errors' %}
+                                             <li>{{ message }}</li>
+                                         {% endif %}
+                                   {% endfor %}
+                                  </ul>
+                             {% endif %}
+                        {% endwith %}
+                        -->
+                        <div class="col-md-5">
+                            <h3>Login</h3>
+                            <form action="/login" method="post" class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-md-offset-1">Email:</label>
+                                    <div class="col-md-5">
+                                        <input type="email" class="form-control" name="email" value="{{session['email']}}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">Password:</label>
+                                    <div class="col-md-5">
+                                        <input type="password" class="form-control" name="pwd">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-5 col-md-offset-3">
+                                        <button type="submit" class="btn btn-info">Login</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+          </div> <!-- End modal body  -->
+        </div> <!-- End modal content -->
+      </div>  <!-- End modal dialog -->
+  </div> <!-- End Modal -->
+
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>

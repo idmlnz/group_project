@@ -10,13 +10,15 @@ from system.core.router import routes
     routes['DELETE']['/users/<int:id>'] = 'users#destroy'
 """
 
-routes['default_controller'] = 'Welcome'
+routes['default_controller'] = 'Cats'
 
 
 #--- cats
 routes['GET']['/cats/getAllCats'] = 'Cats#getAllCats'
 
 #--- users
+routes['GET']['/users/register'] = 'Users#register'
+
 routes['GET']['/users/getUserByEmail/<email>'] = 'Users#getUserByEmail'
 routes['GET']['/users/getUserAddressByEmail/<email>'] = 'Users#getUserAddressByEmail'
 

@@ -9,6 +9,10 @@ class Users(Controller):
   def index(self):
     pass
 
+  def register(self):
+    return self.load_view('/user/modal.html')
+
+
   def getUserByEmail(self, email):
     user = self.models['User'].getUserByEmail(email)
     return self.load_view('/index.html', data=user)
