@@ -22,6 +22,7 @@ routes['GET']['/users/register'] = 'Users#register'
 routes['GET']['/users/isLogged'] = 'Users#isLogged'
 routes['POST']['/users/add'] = 'Users#add'
 routes['POST']['/users/login'] = 'Users#login'
+routes['GET']['/users/logout'] = 'Users#logout'
 
 routes['GET']['/users/getUserByEmail/<email>'] = 'Users#getUserByEmail'
 routes['GET']['/users/getUserAddressByEmail/<email>'] = 'Users#getUserAddressByEmail'

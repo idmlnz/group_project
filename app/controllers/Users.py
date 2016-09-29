@@ -48,7 +48,8 @@ class Users(Controller):
     createStatus = self.models['User'].createUser(userInfo)
     print "createstatus: {}".format(createStatus)
     if createStatus['status'] == True:
-      session['user'] = createStatus['user']
+      session['userid'] = userInfo['email']
+      print "ADD user successful for: {}".format(userInfo['email'])
     else:
       for message in createStatus['errors']:
         flash(message, 'regis_errors')
@@ -76,3 +77,8 @@ class Users(Controller):
     session['userid'] = userInfo['email']
     return redirect('/')
 
+
+  def logout(self):
+    session.clear()
+    print "\nSESSION is cleared on LOGOUT\n"
+    return redirect('/')  # redirect to / FOR NOW
