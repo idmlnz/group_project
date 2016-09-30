@@ -9,10 +9,6 @@ class Users(Controller):
   def index(self):
     pass
 
-  def register(self):
-    return self.load_view('/user/modal.html')
-
-
   def getUserByEmail(self, email):
     user = self.models['User'].getUserByEmail(email)
     return self.load_view('/index.html', data=user)
@@ -55,7 +51,7 @@ class Users(Controller):
         flash(message, 'regis_errors')
       return self.load_view('registration/register.html', error=createStatus['errors'])
 
-    return redirect('/')
+    return redirect('/cats/catView')
 
   def login(self):
     userInfo = {}
@@ -75,7 +71,7 @@ class Users(Controller):
 
     print "LOGIN successful for: {}".format(userInfo['email'])
     session['userid'] = userInfo['email']
-    return redirect('/')
+    return redirect('/cats/catView')
 
 
   def logout(self):
