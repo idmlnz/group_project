@@ -16,7 +16,6 @@
         .thumbnail img:hover { 
           transform: scale(1.1); 
         }
-
     </style>
     <script>
            $(document).ready(function(){
@@ -81,7 +80,8 @@
 
             <div class="row">
               <div class="col-xs-6 col-md-3">
-                <button type="submit" class="thumbnail button-cat">
+
+                <button type="submit" class="thumbnail button-cat" data-toggle="modal" data-target="#myModal2">
                   <img class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat1.jpeg') }}" alt="cat1" >
                 </button>
               </div>
@@ -364,6 +364,54 @@
         </div> <!-- End modal content -->
       </div>  <!-- End modal dialog -->
   </div> <!-- End Modal -->
+
+
+
+  <!-- myModal2-->
+    <div id="myModal2" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+      <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-6 col-xs-offset-3">
+                <div class="">
+                  <img id="cat" class="img-responsive img-rounded" src="{{ url_for('static', filename='images/cat1.jpeg') }}" alt="cat1">
+                </div>
+                <div class="caption">
+                  <h3>Kitten: Chris</h3>
+                  <p>This cat locates in san jose</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-2 col-xs-offset-3" style="margin-top:20px;">
+                <button type="submit" class="btn btn-info" name="rent">Rent</button>
+              </div>
+              <div class="col-xs-2 col-xs-offset-2" style="margin-top:20px;">
+                <button type="submit" class="btn btn-info" name="adopt">Adopt</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-xs-offset-4" style="margin-top:30px;">
+                <button type="submit" class="btn btn-info">Proceed to Checkout</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div> 
+      </div>
+    </div>
+  
+      
+    </div> 
+
+  <!-- end for mymodal2-->
 
   </body>
 </html>
