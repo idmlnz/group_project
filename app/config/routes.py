@@ -16,6 +16,7 @@ routes['default_controller'] = 'Cats'
 #--- cats
 routes['GET']['/cats/getAllCats'] = 'Cats#getAllCats'
 routes['GET']['/cats/selection/<id>'] = 'Cats#selection'
+routes['GET']['/cats/catView'] = 'Cats#catView'
 
 #--- users
 routes['GET']['/users/register'] = 'Users#register'
